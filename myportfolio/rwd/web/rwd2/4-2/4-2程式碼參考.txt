@@ -1,0 +1,394 @@
+﻿//////////////////////////////////////////STEP2.///////////////////////////////////////////////
+
+
+<!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-danger btn-lg">
+		<span class="fa fa-bars"></span></a>
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right">
+				 <span class="fa fa-times"></span></a>
+            <li class="sidebar-brand"><a href="#">Navbar</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <!-- /Side Menu -->
+
+
+///////////////////////////////////////////STEP3.//////////////////////////////////////////////
+
+
+html,body {
+  height: 100%;
+  width: 100%;
+}
+#sidebar-wrapper {
+  margin-right: -250px;
+  right: 0;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+    <script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    </script>
+
+////////////////////////////////////////////STEP4./////////////////////////////////////////////
+
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+}
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+.pull-right{float:right}
+
+
+
+
+////////////////////////////////////////STEP5./////////////////////////////////////////////////
+
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+        <div class="vert-text">
+            <h1>Start Bootstrap</h1>
+            <h3>We Build Great Templates,You Make Them Better</h3>
+            <a href="#about" class="btn btn-warning btn-lg">Find Out More</a>
+        </div>
+    </div>
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+.header {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.vert-text h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+/////////////////////////////////////////STEP6.////////////////////////////////////////////////
+
+<!-- Intro -->
+    <div id="about" class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <h2>About us</h2>
+                    <hr>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- /Intro -->
+
+
+//////////////////////////////////////////STEP8.///////////////////////////////////////////////
+
+
+
+.intro {
+    padding: 50px 0;
+    background-image: linear-gradient(180deg,rgba(54,145,249,1.00) 0%,rgba(255,255,255,1.00) 22.29%);
+}
+
+.media img{
+	width: 30%;
+	max-width: 200px;
+	border: 1px solid #8C8C8C;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+}
+
+
+
+////////////////////////////////////////////STEP10./////////////////////////////////////////////
+
+
+<!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <h2>Our Services</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify-content-around">
+                <div class="col-md-3 text-center">
+                    
+                </div>
+                <div class="col-md-3 text-center">
+                    
+                </div>
+                <div class="col-md-3 text-center">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /Services --> 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+			<div class="service-item">
+                        <span class="service-icon fa fa-umbrella"></span>
+                        <h5>Spacecraft Repair</h5>
+                        <p>Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!</p>
+                    	</div>
+
+			<div class="service-item">
+                        <span class="service-icon fa fa-school"></span>
+                        <h5>Blacksmithing</h5>
+                        <p>Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.</p>
+                    	</div>
+
+			<div class="service-item">
+                        <span class="service-icon fa fa-pencil-ruler"></span>
+                        <h5>Sharpening</h5>
+                        <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
+                    	</div>
+
+
+
+    
+
+////////////////////////////////////////STEP11./////////////////////////////////////////////////
+
+
+
+.services {
+  background: #7fbbda;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.service-item {
+  margin-bottom: 15px;
+}
+
+span.service-icon {
+  border: 3px solid #ffffff;
+  border-radius: 10%;
+  display: inline-block;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////STEP12.///////////////////////////////////////////////
+
+
+
+    <!-- Portfolio -->
+    <div id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <h2>Our Work</h2>
+                    <hr>
+                </div>
+            </div>
+            
+        </div><!-- container end --> 
+    </div>
+    <!-- /Portfolio --> 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+		<div class="row">
+					  <div class="col-sm-5 offset-sm-1">
+				  	  <img src="img/portfolio-1.jpg" class="img-thumbnail img-fluid" alt="Placeholder image"> 
+					  </div>
+				    <div class="col-sm-5">
+					  <h5>carousel-item 1.</h5>
+                        <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
+				    </div>
+		</div>
+
+
+///////////////////////////////////////STEP14.//////////////////////////////////////////////////
+
+@media (max-width:768px){
+	.img-thumbnail{
+		transform: scale(0.8);
+		margin: auto;
+	}
+	.carousel-item p,.carousel-item h5{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+
+
+/////////////////////////////////////STEP15.////////////////////////////////////////////////////
+
+
+<!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <h2>Our Location</h2>
+                    <hr>
+                </div>
+            </div>
+       </div>
+    </div>
+ 
+    <div class="map">
+	
+    </div>
+    <!-- /contact -->
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-center">
+                    <hr>
+                    <p>Copyright © Company 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+	
+/////////////////////////////////////////////////////////////////////////////////////////	
+
+
+
+.map {
+    height: 80%;
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+	border: 5px solid rgba(0,95,164,1.00);
+	border-radius: 30px;
+	padding: 20px;
+	box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+}
+
+///////////////////////////////////////STEP16.//////////////////////////////////////////////////
+
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+	
+////////////////////////////////////////STEP17./////////////////////////////////////////////////	
+	<!-- Callout -->
+    <div class="callout">
+        <div class="vert-text">
+            <h1>A Dramatic Text Area</h1>
+        </div>
+    </div>
+    <!-- /Callout -->
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+.callout {
+	color: #ffffff;
+	display: table;
+	height: 400px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(../img/callout.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

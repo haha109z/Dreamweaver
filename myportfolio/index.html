@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>index</title>
+<!-- write your code here -->
+<style>
+  #animation_container {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+</style>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="index.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("AB19531AF059614C89A5A0A0014BB17A");
+	var lib=comp.getLibrary();
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.index();
+	stage = new lib.Stage(canvas);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+    
+   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+  <script>
+$(function() {
+    $( "#apDiv1" ).draggable(); 
+  });
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+  </script>    
+     
+    
+<style type="text/css">
+body {
+    background-image: url(images/index-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+html,body{
+        height: 100%;
+    }
+    
+#apDiv1 {
+    position: absolute;
+    left: 1449px;
+    top: 150px;
+    width: 154px;
+    height: 214px;
+    z-index: 1;
+}    
+    
+</style>    
+    
+
+</head>
+   
+    
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style=" width:1200px; height:800px">
+	  <canvas id="canvas" width="1200" height="800" style="position: absolute; display: block;"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:800px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+    
+    <div id="apDiv1"><img src="images/drag.png" alt="" width="154" height="214" usemap="#Map" border="0"/>
+   <map name="Map" id="Map">
+     <area shape="rect" coords="133,19,152,31" href="#" onclick="MM_showHideLayers('apDiv1','','hide')"/><!--關閉位置-->
+     <area shape="rect" coords="14,44,56,57" href="rwd/owdesign.html#top" /><!--HOME-->
+     <area shape="rect" coords="13,68,62,81" href="rwd/owdesign.html#services">
+     <area shape="rect" coords="15,93,99,104" href="rwd/owdesign.html#ani">
+     <area shape="rect" coords="13,117,99,128" href="rwd/owdesign.html#web">
+     <area shape="rect" coords="13,139,76,152" href="rwd/owdesign.html#graphic">
+     <area shape="rect" coords="14,162,51,179" href="rwd/owdesign.html#film">
+     <area shape="rect" coords="14,184,64,201" href="rwd/owdesign.html#about">
+   </map>
+</div>     
+    
+</body>
+</html>
